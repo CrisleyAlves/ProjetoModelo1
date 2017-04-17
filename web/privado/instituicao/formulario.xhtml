@@ -38,11 +38,12 @@
                                      size="10" id="txtNome"
                                      maxlength="40" placeholder="obrigatório"/>
                         <p:outputLabel value="FUNDAÇÃO" for="txtFundacao"/>
-                        <p:inputText value="#{controleInstituicao.objeto.anoFundacao}" 
-                                     size="10" id="txtFundacao"
-                                     maxlength="40" placeholder="obrigatório">
-                                     <f:converter converterId="converterCalendar"/>
-                        </p:inputText>
+                        <p:calendar  
+                            value="#{controleInstituicao.objeto.anoFundacao}"                                                                                 pattern="dd/MM/yyyy"
+                                    id="txtFundacao"
+                                    locale="pt_BR" size="12" mask="true">
+                                    <f:converter converterId="converterCalendar"/>
+                       </p:calendar>
                     </p:panelGrid>
                 </h:form>
             </ui:define>

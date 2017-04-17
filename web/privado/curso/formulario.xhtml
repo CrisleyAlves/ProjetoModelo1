@@ -53,12 +53,12 @@
                                                  id="Ativo"/>
                         
                         <p:outputLabel value="INICIO" for="txtInicio"/>
-                        <p:inputText value="#{controleCurso.objeto.inicioAtividades}" 
-                                     size="10" id="txtInicio"
-                                     maxlength="40" placeholder="obrigatório">
+                        <p:calendar  
+                            value="#{controleCurso.objeto.inicioAtividades}"                                                                                 pattern="dd/MM/yyyy"
+                                    id="txtInicio"
+                                    locale="pt_BR" size="12" mask="true">
                                     <f:converter converterId="converterCalendar"/>
-                        </p:inputText>
-                        
+                       </p:calendar>
                         
                         <p:outputLabel value="Instituição" for="selectInstituicao" />
                         

@@ -44,12 +44,12 @@
                                      maxlength="40" placeholder="obrigatório"/>
                         
                         <p:outputLabel value="NASCIMENTO" for="txtNascimento"/>
-                        
-                        <p:inputText value="#{controleAluno.objeto.nascimento}" 
-                                     size="10" id="txtNascimento"
-                                     maxlength="40" placeholder="obrigatório">
+                        <p:calendar  
+                                value="#{controleAluno.objeto.nascimento}"                                                                                 pattern="dd/MM/yyyy"
+                                    id="txtNascimento"
+                                    locale="pt_BR" size="12" mask="true">
                                     <f:converter converterId="converterCalendar"/>
-                        </p:inputText>
+                       </p:calendar>  
                         
                     </p:panelGrid>
                 </h:form>
